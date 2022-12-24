@@ -12,15 +12,13 @@ do
     esac
 done
 
-
 [[ $rebuild = true ]] && [[ -d $yuzu_dir ]] && rm -rf $yuzu_dir
 [[ ! -d $yuzu_dir ]] && mkdir $yuzu_dir && rebuild=true
-
 
 [[ $rebuild = true ]] && git clone --recursive $yuzu_git_url $yuzu_dir
 
 # perform git pull
-pushd /root/yuzu
+pushd $yuzu_dir
 git pull --recurse-submodules
 popd
 
