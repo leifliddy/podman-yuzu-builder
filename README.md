@@ -1,29 +1,29 @@
-# podman-cemu-build
-This project builds the cemu source from https://github.com/cemu-project/Cemu   
+# podman-yuzu-build
+This project builds the yuzu source from https://github.com/yuzu-emu/yuzu-mainline
 \
-Ok, so this setup assumes that you're running **Fedora 37** and want to compile cemu   
-To build for Fedora 36, simply modify the first line in the ```Dockerfile```   
+Ok, so this setup assumes that you're running **Fedora 37** and want to compile yuzu   
+To build for Fedora 37, simply modify the first line in the ```Dockerfile```   
 \
 **ensure these packages are installed**
 ```
 dnf install podman python3-podman python3-termcolor   
 ```
 
-**build cemu**
+**build yuzu**
 ```
-git clone https://github.com/leifliddy/podman-cemu-build.git
-cd podman-cemu-build  
+git clone https://github.com/leifliddy/podman-yuzu-build.git
+cd podman-yuzu-build  
 
 # this will build the image and run the container   
 ./script-podman.py
 
 # login to the container 
-podman exec -it cemu_builder /bin/bash
+podman exec -it yuzu_builder /bin/bash
 
-# once inside the container, run this script to build cemu
-/root/scripts/01-build.cemu.sh
+# once inside the container, run this script to build yuzu
+/root/scripts/01-build.yuzu.sh
 
-# the resulting Cemu binary will be copied to the /output directory which is shared with the host system
+# the resulting yuzu binary will be copied to the /output directory which is shared with the host system
 
 # exit container
 Control+D or exit
