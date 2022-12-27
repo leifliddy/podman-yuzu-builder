@@ -1,7 +1,5 @@
 # podman-yuzu-build
-This project builds the yuzu source from https://github.com/yuzu-emu/yuzu-mainline
-\
-Ok, so this setup assumes that you're running **Fedora 37** and want to compile yuzu     
+This project builds the yuzu source https://github.com/yuzu-emu/yuzu-mainline on a **Fedora 37** podman container  
 \
 **ensure these packages are installed**
 ```
