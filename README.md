@@ -1,5 +1,5 @@
 # podman-yuzu-build
-This project builds the yuzu source https://github.com/yuzu-emu/yuzu-mainline on a **Fedora 37** podman container  
+This project builds the yuzu source https://github.com/yuzu-emu/yuzu-mainline in a **Fedora 37** podman container  
 \
 **ensure these packages are installed**
 ```
