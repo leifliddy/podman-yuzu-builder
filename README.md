@@ -20,6 +20,9 @@ podman exec -it yuzu_builder /bin/bash
 # once inside the container, run this script to build yuzu
 /root/scripts/01-build.yuzu.sh
 
+# use the -r option to perform a clean build (will remove exisiting source dir and build Yuzu from scratch)
+/root/scripts/01-build.yuzu.sh -r
+
 # the resulting yuzu binary will be copied to the /output directory which is shared with the host system
 
 # exit container
